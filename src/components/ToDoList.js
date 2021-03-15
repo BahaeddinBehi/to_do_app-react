@@ -12,9 +12,11 @@ export default function ToDoList({ toDoElementsList }) { {/*14. pass the prop to
                 so first let's create a "ToDo" component.*/}
             </div>
             <div>
-                {/*20. map over all our to-do elements and return a to-element */}
+                {/*20. map over all our to-do elements and return a "ToDoElement"*/}
                 {toDoElementsList.map( element => {
-                    return <ToDo toDoElement={element} />
+                    return <ToDo key={element.id} toDoElement={element} />
+                    /*22. everytime the to-do array changes (toDoElementsList), React is going to render every single to-do element in the array, but we only want to re-render the ones that changed.
+                    so we've to set a unique key, that allows React to only re-render the to-do elements that changed.*/
                     })
                 }
             </div>

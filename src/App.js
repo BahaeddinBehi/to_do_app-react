@@ -21,7 +21,24 @@ function App() {
   //const [toDoElements, setToDoElements] = useState([])
 
   //12. pass some data to "useState"
-  const [toDoElements, setToDoElements] = useState(["learn React", "take a nap"])
+  const [toDoElements, setToDoElements] = useState([/*"learn React", "drink a tea" 23. we don't want to render strings.
+  instead we want to render to-do objects with IDs, names, etc*/
+    {
+      id: 1,
+      name: "learn React",
+      isComplete: false
+    },
+    {
+      id: 2,
+      name: "drink a tea",
+      isComplete: false
+    },
+    {
+      id: 3,
+      name: "take a nap",
+      isComplete: false
+    }
+  ])
   
   return (
     <React.Fragment> {/*4. wrap the JSX expressions that we want to return, with a "React.Fragment" tag*/}
